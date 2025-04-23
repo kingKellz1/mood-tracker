@@ -1,0 +1,10 @@
+# Bytecode cache
+__pycache__/
+*.pyc
+*.log
+
+# Log file - optional
+mood_log.txt
+
+# Mac system files
+.DS_Store
