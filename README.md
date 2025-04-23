@@ -13,4 +13,4 @@ Users can log their mood and view previous entries with a clean menu system.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mood-tracker.git
+   git clone https://github.com/kingKellz1/mood-tracker.git
