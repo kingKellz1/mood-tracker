@@ -1,7 +1,7 @@
 import datetime
 
 def user_choice_1(): #This creates a function so view the log file
-    with open("/Users/nichealhickson/Desktop/python_projects/mood_tracker/mood_log.txt", "r") as file:
+    with open("/Users/username/Desktop/python_projects/mood_tracker/mood_log.txt", "r") as file:
         lines = file.readlines()
         for line in lines:
             print(line.strip())
@@ -11,7 +11,7 @@ def user_choice_2(): #This creates a function so user cna add a log enty
     users_day = input("How was your day?: ")
     now = datetime.datetime.now() #Stores the current date and time to a variable called "now"
     formated_now = now.strftime("%Y-%m-%d") #Stores only the date in the variable
-    with open("/Users/nichealhickson/Desktop/python_projects/mood_tracker/mood_log.txt", "a") as file:
+    with open("/Users/username/Desktop/python_projects/mood_tracker/mood_log.txt", "a") as file:
         line = f"{formated_now} | {users_feeling} | {users_day}\n"
         file.write(line)
 
