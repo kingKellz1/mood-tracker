@@ -1,6 +1,7 @@
 import datetime
 from pathlib import Path
 
+<<<<<<< HEAD
 #Gets the directory of the parent folder
 current_dir = Path(__file__).parent
 
@@ -29,6 +30,20 @@ def add_mood_log():
     formated_now = now.strftime("%Y-%m-%d") 
 
     with open(file_path, "a") as file:
+=======
+def user_choice_1(): #This creates a function so view the log file
+    with open("/Users/username/Desktop/python_projects/mood_tracker/mood_log.txt", "r") as file:
+        lines = file.readlines()
+        for line in lines:
+            print(line.strip())
+
+def user_choice_2(): #This creates a function so user cna add a log enty
+    users_feeling = input("How are you feeling today?: (Happy, Sad, Mad, Angry, Flat) ")
+    users_day = input("How was your day?: ")
+    now = datetime.datetime.now() #Stores the current date and time to a variable called "now"
+    formated_now = now.strftime("%Y-%m-%d") #Stores only the date in the variable
+    with open("/Users/username/Desktop/python_projects/mood_tracker/mood_log.txt", "a") as file:
+>>>>>>> bb1ba1a732370722a7e0de309439a9c187eb7380
         line = f"{formated_now} | {users_feeling} | {users_day}\n"
         file.write(line)
 
@@ -48,5 +63,10 @@ def main():
             #Prompts the user to enter a valid choice
             print("Please make a valid choice!\n") 
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     main()
+=======
+else:
+    print("Please make a valid choice!") #Prompts the user to enter a valid choice
+>>>>>>> bb1ba1a732370722a7e0de309439a9c187eb7380
