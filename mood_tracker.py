@@ -7,24 +7,20 @@ SCRIPT_DIR = Path(__file__).parent
 #Points to the file in the same directory
 file_path = SCRIPT_DIR / "mood_log.txt"
 
-if not file_path.exists:
-    file_path.touch()  # Creates an empty file if it doesn’t exist yet
-
-
 def view_mood_log(): 
     """Creates a function to view the log file"""
     with open(file_path, "r", encoding="utf-8") as file:
         for line in file:
             print(line.strip())
 
-def add_mood_log(): 
+def add_mood_log():
     """Creates a function so user can add a log entry"""
     users_feeling = input("\nHow are you feeling today?: (Happy, Sad, Mad, Angry, Flat) \n")
     users_day = input("\nHow was your day?: \n")
 
     #Stores the current date and time to a variable called "now"
     now = datetime.datetime.now()
-    
+
     #Stores only the date in the variable
     formatted_now = now.strftime("%Y-%m-%d")
 
@@ -34,6 +30,11 @@ def add_mood_log():
 
 def main():
     """Calls the main function"""
+
+    # Creates log file if it doesn’t exist yet
+    if not file_path.exists:
+        file_path.touch()
+
     print("\n***********************************")
     print("Hello, Welcome to your mood tracker")
     print("***********************************\n")
